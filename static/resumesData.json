@@ -1,0 +1,240 @@
+[
+  {
+    "name": "Geometric Resume",
+    "des": "Excellent resumes are what get noticed. If you are looking for a resume that stands out, this one will help. Emphasize your experience and qualifications with this template.",
+    "img": "/static/temp0.jpg",
+    "example": {}
+  },
+  {
+    "name": "Basic Modern Resume",
+    "des": "Use this modern resume template to create a resume that gets results. You don't need a flashy design to get the job. This modern professional templates features a simple, clean look.",
+    "img": "/static/temp1.jpg",
+    "fieldsDescription": [
+      {
+        "name": "firstName",
+        "type": "field",
+        "dataType": "string",
+        "example": "Johnson"
+      },
+      {
+        "name": "surname",
+        "type": "field",
+        "dataType": "string",
+        "example": "Doe"
+      },
+      {
+        "name": "title",
+        "type": "field",
+        "dataType": "string",
+        "example": "Senior Developer"
+      },
+      {
+        "name": "address",
+        "type": "field",
+        "dataType": "string",
+        "example": "Houston Texas, USA"
+      },
+      {
+        "name": "street",
+        "dataType": "string",
+        "example": "Satellite Town road II"
+      },
+      {
+        "name": "city",
+        "type": "field",
+        "dataType": "string",
+        "example": "Texas"
+      },
+      {
+        "name": "phone",
+        "type": "field",
+        "dataType": "string",
+        "example": "(+234)913 324 0345"
+      },
+      {
+        "name": "zipCode",
+        "type": "field",
+        "dataType": "number",
+        "example": 5024
+      },
+      {
+        "name": "email",
+        "type": "field",
+        "dataType": "email",
+        "example": "johnsondoe@gmail.com"
+      },
+      {
+        "name": "profile",
+        "type": "field",
+        "dataType": "textarea",
+        "example": "A resume is a document that sums up your qualifications for the job that you're applying for. Studies say that the average recruiter scans a resume for all of six seconds—so it’s absolutely critical for your resume to be clear, concise, and easy to read. You don’t want the recruiter to read your resume over and over again or find it really boring. First impressions matter.State your career goals and show how they align with the job description you’re targeting. Be brief and keep it from sounding generic. Be yourself."
+      },
+      {
+        "name": "workExperience",
+        "type": "legend",
+        "dataType": "array",
+        "subFields": [
+          [
+            {
+              "name": "startYear",
+              "example": 2019,
+              "dataType": "number",
+              "type": "field"
+            },
+            {
+              "name": "endYear",
+              "example": 2020,
+              "dataType": "number",
+              "type": "field"
+            },
+            {
+              "name": "title",
+              "example": "Design Director",
+              "dataType": "string",
+              "type": "field"
+            },
+            {
+              "name": "company",
+              "example": "First Up Consultants",
+              "dataType": "string",
+              "type": "field"
+            },
+            {
+              "name": "position",
+              "example": "Senior Software Engineer",
+              "dataType": "string",
+              "type": "field"
+            }
+          ],
+          [
+            {
+              "name": "startYear",
+              "dataType": "number",
+              "type": "field",
+              "example": 2010
+            },
+            {
+              "name": "endYear",
+              "dataType": "number",
+              "type": "field",
+              "example": 2019
+            },
+            {
+              "name": "title",
+              "dataType": "string",
+              "type": "field",
+              "example": "Senior Developer"
+            },
+            {
+              "name": "position",
+              "dataType": "string",
+              "type": "field",
+              "example": "Lead"
+            },
+            {
+              "name": "company",
+              "dataType": "string",
+              "type": "field",
+              "example": "Nod Publishing"
+            }
+          ],
+          [
+            {
+              "name": "startYear",
+              "dataType": "number",
+              "type": "field",
+              "example": 2004
+            },
+            {
+              "name": "endYear",
+              "dataType": "number",
+              "type": "field",
+              "example": 2019
+            },
+            {
+              "name": "title",
+              "dataType": "string",
+              "type": "field",
+              "example": "Senior Developer"
+            },
+            {
+              "name": "position",
+              "dataType": "string",
+              "type": "field",
+              "example": "Lead"
+            },
+            {
+              "name": "company",
+              "dataType": "string",
+              "type": "field",
+              "example": "Nod Publishing"
+            }
+          ]
+        ]
+      },
+      {
+        "name": "skills",
+        "type": "field",
+        "dataType": "string",
+        "example": "HTML\", \"CSS\", \"REACT\", \"ANGULAR\", \"Javascript\", \"NodeJS\""
+      },
+      {
+        "name": "communicationExperience",
+        "type": "field",
+        "dataType": "string",
+        "example": "To start your resume, summarize your key responsibilities, accomplishments, and past experience. Where appropriate, definitely use the language and words you find in the specific job description and target 3-5 key areas"
+      },
+      {
+        "name": "leadershipExperience",
+        "type": "field",
+        "dataType": "string",
+        "example": "For example, if you're a quick learner, then maybe you can write something like \"motivated to quickly resolve challenges.\""
+      },
+      {
+        "name": "references",
+        "type": "field",
+        "dataType": "string",
+        "example": "JohnCitation.com"
+      },
+      {
+        "name": "workSummary",
+        "type": "field",
+        "dataType": "textarea",
+        "example": "I did something cool in this company"
+      },
+      {
+        "name": "education",
+        "type": "legend",
+        "dataType": "array",
+        "subFields": [
+          [
+            {
+              "name": "name",
+              "dataType": "string",
+              "type": "field",
+              "example": "BSc Computer Science"
+            },
+            {
+              "name": "city",
+              "dataType": "string",
+              "type": "field",
+              "example": "Texas"
+            },
+            {
+              "name": "state",
+              "dataType": "string",
+              "type": "field",
+              "example": "Houston"
+            },
+            {
+              "name": "summary",
+              "dataType": "string",
+              "type": "field",
+              "example": "I did some internships here"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

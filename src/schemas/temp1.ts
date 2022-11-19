@@ -1,4 +1,4 @@
-import Joi from "Joi";
+import Joi from "joi";
 
 const job = Joi.object({
   startYear: Joi.number().required().min(1970).max(new Date().getFullYear()),
