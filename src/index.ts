@@ -4,8 +4,9 @@ import buildResume from "./buildResume";
 import temp0 from "./schemas/temp0";
 import temp1 from "./schemas/temp1";
 const app = express();
-const PORT = 8080;
+const PORT =process.env["PORT"] || 8080;
 app.use("/static",express.static("static"));
+app.use("/", express.static("client"))
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
