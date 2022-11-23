@@ -9,12 +9,12 @@ const job = Joi.object({
 });
 
 const temp1 = Joi.object({
-  firstName: Joi.string().required().max(12).min(4),
-  surname: Joi.string().required().max(12).min(4),
+  firstName: Joi.string().required().max(12).min(2),
+  surname: Joi.string().required().max(12).min(2),
   title: Joi.string().required().max(30).min(4),
   address: Joi.string().required().max(40).min(4),
   street: Joi.string().required().max(30).min(5),
-  city: Joi.string().required().max(23).min(5),
+  city: Joi.string().required().max(23).min(3),
   phone: Joi.string().required().max(20).min(6),
   zipCode: Joi.number().required().max(Math.pow(10,9)).min(Math.pow(10,4)),
   email: Joi.string().required().email(),
