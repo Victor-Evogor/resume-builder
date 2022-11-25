@@ -1,5 +1,6 @@
 import pdf from "pdf-creator-node";
 import { readFileSync } from "fs";
+import path from "path";
 
 const options = {
   format: "Letter",
@@ -10,7 +11,7 @@ const options = {
 
 async function buildResume<T>(resumeData: T, index: number): Promise<Buffer> {
 
-  const html = readFileSync(__dirname + `/templates/temp${index}/template.hbs`, "utf-8");
+  const html = readFileSync(path.join(__dirname , `../templates/temp${index}/template.hbs`), "utf-8");
   const document = {
     html: html,
     data: resumeData,
