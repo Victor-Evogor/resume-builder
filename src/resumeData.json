@@ -1,0 +1,12 @@
+[
+  {
+    "name":"Geometric Resume",
+    "description": "Excellent resumes are what get noticed. If you are looking for a resume that stands out, this one will help. Emphasize your experience and qualifications with this template.",
+    "thumbnail": "/static/temp0.jpg"
+  },
+  {
+    "name": "Basic Modern Resume",
+    "description":"Use this modern resume template to create a resume that gets results. You don't need a flashy design to get the job. This modern professional templates features a simple, clean look.",
+    "thumbnail":"/static/temp1.jpg"
+  }
+]

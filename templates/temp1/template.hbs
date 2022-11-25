@@ -294,10 +294,8 @@
               text-align: left;
             "
           >
-          {{education.name}}<br/>
-          {{education.city}} <br/>
-          {{education.state}} <br/>
-          {{education.summary}}
+          [You might want to include your GPA here and a brief summary of
+          relevant coursework, awards, and honors.]
           </p>
         </td>
         <td
@@ -500,11 +498,12 @@
               padding-right: 5pt;
               text-indent: 53pt;
               line-height: 120%;
+              font-weight: normal;
               text-align: right;
             "
           >
             {{#each skills}}
-              <p>{{this}}</p>
+              <span>{{this}}<br/></span>
             {{/each}}
           </p>
 

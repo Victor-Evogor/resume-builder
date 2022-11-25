@@ -3,13 +3,21 @@ import cors from "cors";
 import buildResume from "./buildResume";
 import temp0 from "./schemas/temp0";
 import temp1 from "./schemas/temp1";
+import path from "path"
+import router from "./routes";
+
 const app = express();
 const PORT =process.env["PORT"] || 8080;
+
 app.use("/static",express.static("static"));
-app.use("/", express.static("client"))
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(router);
+app.set("view engine", "ejs");
+app.set("views",path.join(__dirname,"../views"))
+
+
 
 app.post("/api/resume/:index", (req: Request, res: Response) => {
   if (!Number(req.params.index)) {
@@ -17,6 +25,7 @@ app.post("/api/resume/:index", (req: Request, res: Response) => {
     console.log("Index is not a number")
     return;
   }
+
   const index = Number(req.params.index);
   const payload = req.body;
   const temps = [temp0, temp1];
@@ -31,7 +40,7 @@ app.post("/api/resume/:index", (req: Request, res: Response) => {
     .then((bufferData) => {
       res
         .status(200)
-        .setHeader("Content-Type", "Application/PDF")
+        .setHeader("Content-Type", "application/pdf")
         .send(bufferData);
     })
     .catch((err) => {

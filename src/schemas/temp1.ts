@@ -1,8 +1,8 @@
 import Joi from "joi";
 
 const job = Joi.object({
-  startYear: Joi.number().required().min(1970).max(new Date().getFullYear()),
-  endYear: Joi.number().required().min(1970).max(new Date().getFullYear()),
+  startYear: Joi.number().required().min(1950).max(new Date().getFullYear()),
+  endYear: Joi.number().required().min(1950).max(new Date().getFullYear()),
   title: Joi.string().required().max(30).min(4),
   position: Joi.string().required().max(30).min(4),
   company: Joi.string().required().max(30).min(4),
@@ -31,7 +31,7 @@ const temp1 = Joi.object({
     state: Joi.string().required().max(23).min(5),
     summary: Joi.string().required().max(120).min(5),
   }).required(),
-  workSummary: Joi.string().required().max(120).min(20),
+  workSummary: Joi.string().required().max(400).min(20),
   skills: Joi.array()
     .items(Joi.string().required(), Joi.string().required(), Joi.string().required())
     .required(),
