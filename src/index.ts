@@ -20,7 +20,7 @@ app.set("views",path.join(__dirname,"../views"))
 
 
 app.post("/api/resume/:index", (req: Request, res: Response) => {
-  if (!Number(req.params.index)) {
+  if (!Number(req.params.index) && !(Number(req.params.index) === 0)) {
     res.status(400).send("Index is not a number");
     console.log("Index is not a number")
     return;
