@@ -1,33 +1,35 @@
 # Description
-A nodejs api application that creates resumes from html templates and response body
+
+A nodejs api application that creates resumes/CV from html templates and user data
 
 # Start
 
-## windows
-
 ```
-npm run dev
-```
-
-or
-
-```
-npm run start
-```
-
-## linux
-
-```
-tsc --project . --watch
-```
-then in a new terminal
-```
-nodemon ./build/index.ts
+npm install
+tsc --project tsconfig.json
+npm run build
 ```
 
 # How to add Templates
 
-- Create a html page for only the `A4` size in `build/templates/tempx/tempx.hbs`
-- Add the schema validation with joi to `src/schemas/tempx.ts`.
-- import it to `src/index.ts` and add it to the `temps` variable
-- Then later add the component to it in the angular code
+- Add a new template file to `templates/tempx/template.hbs` with the [handlebars](https://handlebars.org) syntax
+- Add a new Schema file to `src/schemas/tempx.ts` using [joi](https://joi.org)
+- import the schema and add it to the `schema` array in `src/index.ts`
+- Create the corresponding view in `views/pages/`
+- Add the meta data of the resume to `src/resumeData.json`
+- Add a preview thumbnail to `static/`
+
+Make sure all folders created in `templates` are named according to their index. example:
+```
+temp0/template.hbs
+temp1/template.hbs
+temp2/template.hbs
+.
+.
+.
+tempx/template.hbs
+```
+
+and all schema file should be named according to index `temp{index}`
+
+same with all view files
