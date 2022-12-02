@@ -1,11 +1,11 @@
-function build(resumeData) {
+function build(resumeData, index) {
   $("#loader").toggleClass("d-none");
 
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
   window
-    .fetch("/api/resume/1", {
+    .fetch(`/api/resume/${index}`, {
       method: "POSt",
       body: JSON.stringify(resumeData),
       headers: myHeaders,

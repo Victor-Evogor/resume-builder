@@ -46,7 +46,7 @@ const temp0 = Joi.object({
   education: Joi.array().required().items(education.required()).length(2),
   skills: Joi.array()
     .required()
-    .items(Joi.string().required().max(30).min(3))
+    .items(Joi.string().required())
     .length(5),
   activities: Joi.string().required().min(50).max(300),
 });

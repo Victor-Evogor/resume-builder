@@ -13,7 +13,7 @@
   <div class="d-flex flex-row gap-2 flex-wrap justify-content-center">
     <% resumes.forEach((resume, index) => { %>
       <div class="card mb-2 position-relative" style="width: 18rem;">
-        <img src="<%- resume.thumbnail %>" class="card-img-top" alt="...">
+        <a href="/temp<%- index %>"><img src="<%- resume.thumbnail %>" class="card-img-top" alt="..."></a>
         <div class="card-body">
           <h5 class="card-title"><%- resume.name %> </h5>
           <p class="card-text"><%- resume.description %> </p>
