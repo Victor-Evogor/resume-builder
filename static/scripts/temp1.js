@@ -46,7 +46,7 @@ function main(event) {
       },
     ],
   };
-  build(resumeData);
+  build(resumeData, 1);
 }
 
 window.fields = {

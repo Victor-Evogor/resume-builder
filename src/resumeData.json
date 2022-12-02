@@ -1,12 +1,12 @@
 [
   {
-    "name":"Geometric Resume",
-    "description": "Excellent resumes are what get noticed. If you are looking for a resume that stands out, this one will help. Emphasize your experience and qualifications with this template.",
+    "name": "Modern Chronological Resume",
+    "description": "This modern chronological resume or CV emphasizes your experience by showing your most recent jobs first. Use this resume template to create a resume for a professional job search package.",
     "thumbnail": "/static/temp0.jpg"
   },
   {
     "name": "Basic Modern Resume",
-    "description":"Use this modern resume template to create a resume that gets results. You don't need a flashy design to get the job. This modern professional templates features a simple, clean look.",
-    "thumbnail":"/static/temp1.jpg"
+    "description": "Use this modern resume template to create a resume that gets results. You don't need a flashy design to get the job. This modern professional templates features a simple, clean look and feel that is guaranteed to get you that job.",
+    "thumbnail": "/static/temp1.jpg"
   }
 ]

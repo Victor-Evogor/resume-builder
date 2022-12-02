@@ -1,64 +1,54 @@
 import Joi from "joi";
 
-const job = Joi.object({
-  startYear: Joi.number().required().min(1970).max(new Date().getFullYear()),
-  endYear: Joi.number().required().min(1970).max(new Date().getFullYear()),
-  title: Joi.string().required().min(4).max(20),
-  description: Joi.string().required().min(20).max(300),
-  company: Joi.string().required().min(5).max(15),
+const jobExperience = Joi.object({
+  startYear: Joi.number().required().min(1930).max(new Date().getFullYear()),
+  endYear: Joi.number().required().min(1930).max(new Date().getFullYear()),
+  jobTitle: Joi.string().required().min(3).max(40),
+  company: Joi.string().required().min(3).max(40),
+  summary: Joi.string().required().min(20).max(300),
 });
 
 const education = Joi.object({
-  startMonth: Joi.string()
-    .valid(
-      "january",
-      "february",
-      "match",
-      "april",
-      "may",
-      "june",
-      "july",
-      "august",
-      "september",
-      "october",
-      "november",
-      "december"
-    )
-    .required(),
-  endMonth: Joi.string()
-    .valid(
-      "january",
-      "february",
-      "match",
-      "april",
-      "may",
-      "june",
-      "july",
-      "august",
-      "september",
-      "october",
-      "november",
-      "december"
-    )
-    .required(),
-  startYear: Joi.number().required().min(1970).max(new Date().getFullYear()),
-  endYear: Joi.number().required().min(1970).max(new Date().getFullYear()),
+  month: Joi.string()
+    .required()
+    .allow(
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ),
+  year: Joi.number().required().min(1930).max(new Date().getFullYear()),
+  degree: Joi.string().required().min(3).max(40),
+  school: Joi.string().required().min(3).max(40),
+  summary: Joi.string().required().min(20).max(300),
 });
 
 const temp0 = Joi.object({
-  firstName: Joi.string().required().max(12).min(4),
-  surname: Joi.string().required().max(12).min(4),
-  street: Joi.string().required().max(30).min(5),
-  city: Joi.string().required().max(23).min(5),
-  phone: Joi.string().required().max(20).min(6),
-  email: Joi.string().required().email(),
-  linkedIn: Joi.string().required().min(16).max(50),
-  profile: Joi.string().required().min(50).max(600),
-  workExperience: Joi.array()
-    .items(job.required(), job.required())
+  firstName: Joi.string().required().min(2).max(15),
+  surname: Joi.string().required().min(2).max(15),
+  address: Joi.string().required().min(4).max(40),
+  phone: Joi.string().required().min(4).max(20),
+  email: Joi.string().email().required(),
+  linkedin: Joi.string().required().min(10).max(60),
+  twitter: Joi.string().required().min(5).max(60),
+  blog: Joi.string().required().min(5).max(60),
+  portfolio: Joi.string().required().min(5).max(60),
+  bio: Joi.string().required().min(100).max(600),
+  experience: Joi.array().required().items(jobExperience.required()).length(2),
+  education: Joi.array().required().items(education.required()).length(2),
+  skills: Joi.array()
     .required()
-    .max(3),
-  education: Joi.array().items(education.required()).required().max(2),
+    .items(Joi.string().required())
+    .length(5),
+  activities: Joi.string().required().min(50).max(300),
 });
 
 export default temp0;

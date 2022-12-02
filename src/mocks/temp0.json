@@ -1,0 +1,46 @@
+{
+  "firstName":"Yuuri",
+  "surname":"Tanaka",
+  "address":"Houston Texas, US",
+  "phone": "+234 963 192 2912",
+  "email":"yuuritanaka291@mail.com",
+  "linkedin":"linkedin.com/in/yurritanaka",
+  "twitter": "twitter.com/yuuritanaka",
+  "blog":"example.com",
+  "portfolio":"yuuritanaka.com",
+  "bio":"I have over 10 years of professional development experience. I am a highly motivated and detail-oriented individual who is always looking for new challenges. I have a strong background in React, HTML/CSS, Java, JavaScript, PHP, Python 3, and SQL. In addition to my technical skills, I also possess excellent communication and interpersonal skills which allow me to work effectively with others in collaborating together",
+  "experience":[
+    {
+      "startYear": 2020,
+      "endYear": 2022,
+      "jobTitle": "Senior Full Stack Developer",
+      "company": "Walmart",
+      "summary": "Implemented Figma UI designs into React component Pushed code commits to GitHub repository on a daily basis and deployed to Heroku, Used Next.js based on React/Hooks and Node.js to build frontend and backend"
+    },
+    {
+      "startYear": 2015,
+      "endYear": 2020,
+      "jobTitle": "Senior Software Engineer",
+      "company": "HubSpire",
+      "summary": "Developed new software products of Web & Mobile in various industries such as eCommerce, HealthCare, ERP, B2B SaaS at both Front End and Back End. Contributed to Front End with React.js, TypeScript, and Back End and API development with using Node, PHP, Angular, C#, Java"
+    }
+  ],
+  "education":[
+    {
+      "month":"April",
+      "year": 2011,
+      "degree": "Bachelor Of Computer Science",
+      "school": "Medgar Evers College | CUNY",
+      "summary":"I did internship on web development and database administration"
+    },
+    {
+      "month":"July",
+      "year": 2006,
+      "degree": "Software Development",
+      "school": "Dev School Africa",
+      "summary": "I did internship on web development and database administration"
+    }
+  ],
+  "skills": ["Java", "PHP", "JavaScript", "React", "SQL"],
+  "activities":"Out of work I am a very cheerful and optimal person, I look up to the next big events that come my way. I love to code as a career and also as a hobby. I also love problem solving and creative thinking. I write blogs and I have a youtube channel where I teach programming concepts"
+}

@@ -1,3 +1,454 @@
 <%- include("../partials/layout-top.ejs") %>
-<main>Coming soon. Check out the only <a href="/temp1">available template</a></main>
+<script src="/static/scripts/jquery.min.js"></script>
+<script src="/static/scripts/buildResumeClient.js"></script>
+<script src="/static/scripts/temp0.js" defer></script>
+<main class="container">
+  <form onsubmit="main(event)" class="my-2">
+    <div class="row g-3 my-3">
+      <div class="col-12">
+        <h3>About</h3>
+        <hr />
+      </div>
+
+      <div class="col-md-6">
+        <label for="first-name" class="form-label">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="first-name"
+          placeholder="John"
+          required
+          maxlength="15"
+          minlength="2"
+        />
+      </div>
+
+      <div class="col-md-6">
+        <label for="Surname" class="form-label">Surname</label>
+        <input
+          type="text"
+          class="form-control"
+          id="surname"
+          placeholder="Doe"
+          maxlength="15"
+          minlength="2"
+          required
+        />
+      </div>
+
+      <div class="col-md-8">
+        <label for="address" class="form-label">Address</label>
+        <input
+          type="text"
+          class="form-control"
+          id="address"
+          placeholder="Houston Texas"
+          maxlength="40"
+          minlength="4"
+          required
+        />
+      </div>
+
+      <div class="col-md-4">
+        <label for="email" class="form-label">Email</label
+        ><input
+          type="email"
+          id="email"
+          class="form-control"
+          placeholder="youremail@yourprovider.com"
+          minlength="4"
+          required
+        />
+      </div>
+
+      <div class="col-md-4">
+        <label for="twitter" class="form-label">Twitter</label
+        ><input
+          type="text"
+          id="twitter"
+          class="form-control"
+          placeholder="twitter.com/your_username
+          required
+          maxlength="60"
+          minlength="5"
+        />
+      </div>
+
+      <div class="col-md-4">
+        <label for="linkedin" class="form-label">LinkedIn</label
+        ><input
+          type="text"
+          id="linkedin"
+          class="form-control"
+          placeholder="linkedin.com/in/your_username"
+          required
+          maxlength="60"
+          minlength="10"
+        />
+      </div>
+
+      <div class="col-md-4">
+        <label for="phone" class="form-label">Phone No.</label
+        ><input
+          type="text"
+          class="form-control"
+          id="phone"
+          required
+          minlength="6"
+          maxlength="20"
+        />
+      </div>
+
+      <div class="col-md-6">
+        <label for="blog" class="form-label">Blog</label
+        ><input
+          type="text"
+          class="form-control"
+          placeholder="exampleblog.com"
+          id="blog"
+          required
+          minlength="5"
+          maxlength="60"
+        />
+      </div>
+
+      <div class="col-md-6">
+        <label for="portfolio" class="form-label">Portfolio</label
+        ><input
+          type="text"
+          class="form-control"
+          id="portfolio"
+          placeholder="victorevogor.com"
+          required
+          minlength="5"
+          maxlength="60"
+        />
+      </div>
+
+      <div class="col-md-12">
+        <label for="bio" class="form-label">Bio</label
+        ><textarea
+          type="text"
+          class="form-control"
+          id="bio"
+          placeholder="Write a very strong bio within 600 characters and 100 characters. Use words like passionate, detailed oriented, skilled etc"
+          required
+          minlength="100"
+          maxlength="600"
+          rows="6"
+          cols="100"
+        ></textarea>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-12">
+          <h3>Education</h3>
+          <hr />
+        </div>
+      </div>
+
+      <div class="col-12 border rounded row g-2 py-3 px-2 mx-0 mt-0">
+        <div class="col-md-3">
+          <label for="month-0" class="form-label">Month</label>
+          <input
+            type="text"
+            class="form-control"
+            id="month-0"
+            required
+            minlength="3"
+            maxlength="9"
+          />
+        </div>
+
+        <div class="col-md-3">
+          <label for="year-0" class="form-label">Year</label>
+          <input
+            type="number"
+            class="form-control"
+            id="year-0"
+            required
+            minlength="1930"
+            maxlength="<%- (new Date()).getFullYear() %>"
+          />
+        </div>
+
+        <div class="col-md-3">
+          <label for="degree-0" class="form-label">Degree</label>
+          <input
+            type="text"
+            class="form-control"
+            id="degree-0"
+            required
+            maxlength="40"
+            minlength="3"
+          />
+        </div>
+
+        <div class="col-md-3">
+          <label for="school-0" class="form-label">School</label>
+          <input
+            type="text"
+            class="form-control"
+            id="school-0"
+            required
+            maxlength="40"
+            minlength="4"
+          />
+        </div>
+
+        <div class="col-md-3">
+          <label for="summary-0" class="form-label">Summary</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="education-summary-0"
+            required
+            maxlength="300"
+            minlength="4"
+            rows="5"
+            cols="60"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="col-12 border rounded row g-2 py-3 px-2 mx-0 mt-2">
+        <div class="col-md-3">
+          <label for="month-1" class="form-label">Month</label>
+          <input
+            type="text"
+            class="form-control"
+            id="month-1"
+            required
+            minlength="3"
+            maxlength="9"
+          />
+        </div>
+
+        <div class="col-md-3">
+          <label for="year-1" class="form-label">Year</label>
+          <input
+            type="number"
+            class="form-control"
+            id="year-1"
+            required
+            minlength="1930"
+            maxlength="<%- (new Date()).getFullYear() %>"
+          />
+        </div>
+
+        <div class="col-md-3">
+          <label for="degree-1" class="form-label">Degree</label>
+          <input
+            type="text"
+            class="form-control"
+            id="degree-1"
+            required
+            maxlength="40"
+            minlength="3"
+          />
+        </div>
+
+        <div class="col-md-3">
+          <label for="school-1" class="form-label">School</label>
+          <input
+            type="text"
+            class="form-control"
+            id="school-1"
+            required
+            maxlength="40"
+            minlength="4"
+          />
+        </div>
+
+        <div class="col-md-3">
+          <label for="summary-1" class="form-label">Summary</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="education-summary-1"
+            required
+            maxlength="300"
+            minlength="4"
+            rows="5"
+            cols="60"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-12">
+          <h3>Work Experience</h3>
+          <hr />
+        </div>
+      </div>
+
+      <div class="col-12 border rounded row g-2 py-3 px-2 mx-0 mt-0">
+        <div class="col-md-3">
+          <label for="start-year-0" class="form-label">Start Year</label>
+          <input
+            type="number"
+            class="form-control"
+            id="start-year-0"
+            required
+            minlength="1930"
+            maxlength="<%- (new Date()).getFullYear() %>"
+          />
+        </div>
+
+        <div class="col-md-3">
+          <label for="end-year-0" class="form-label">End Year</label>
+          <input
+            type="number"
+            class="form-control"
+            id="end-year-0"
+            required
+            minlength="1930"
+            maxlength="<%- (new Date()).getFullYear() %>"
+          />
+        </div>
+
+        <div class="col-md-3">
+          <label for="job-title-0" class="form-label">Job Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="job-title-0"
+            required
+            maxlength="40"
+            minlength="3"
+          />
+        </div>
+
+        <div class="col-md-3">
+          <label for="company-0" class="form-label">Company</label>
+          <input
+            type="text"
+            class="form-control"
+            id="company-0"
+            required
+            maxlength="40"
+            minlength="3"
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label for="summary-0" class="form-label">Summary</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="work-summary-0"
+            required
+            maxlength="300"
+            minlength="20"
+            rows="6"
+            cols="50"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="col-12 border rounded row g-2 py-3 px-2 mx-0 mt-2">
+        <div class="col-md-3">
+          <label for="start-year-1" class="form-label">Start Year</label>
+          <input
+            type="number"
+            class="form-control"
+            id="start-year-1"
+            required
+            minlength="1930"
+            maxlength="<%- (new Date()).getFullYear() %>"
+          />
+        </div>
+
+        <div class="col-md-3">
+          <label for="end-year-1" class="form-label">End Year</label>
+          <input
+            type="number"
+            class="form-control"
+            id="end-year-1"
+            required
+            minlength="1930"
+            maxlength="<%- (new Date()).getFullYear() %>"
+          />
+        </div>
+
+        <div class="col-md-3">
+          <label for="job-title-1" class="form-label">Job Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="job-title-1"
+            required
+            maxlength="40"
+            minlength="3"
+          />
+        </div>
+
+        <div class="col-md-3">
+          <label for="company-1" class="form-label">Company</label>
+          <input
+            type="text"
+            class="form-control"
+            id="company-1"
+            required
+            maxlength="40"
+            minlength="3"
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label for="summary-1" class="form-label">Summary</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="work-summary-1"
+            required
+            maxlength="300"
+            minlength="20"
+            rows="6"
+            cols="50"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-12">
+          <h3>Skills and Activities</h3>
+          <hr />
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <label for="skills" class="form-label">Skills</label>
+        <textarea
+          type="text"
+          class="form-control"
+          id="skills"
+          required
+          placeholder="Separate each skill with a comma e.g HTML,CSS, Javascript, Java, SQL. Provide 5 skills only!"
+          rows="6"
+          cols="50"
+        ></textarea>
+      </div>
+
+      <div class="col-md-6">
+        <label for="activities" class="form-label"
+          >Activities and Hobbies</label
+        >
+        <textarea
+          type="text"
+          class="form-control"
+          id="activities"
+          maxlength="300"
+          minlength="50"
+          required
+          placeholder="Go ahead and list all your hobbies and stuff you do at your leisure time within 300 characters"
+          rows="6"
+          cols="50"
+        ></textarea>
+      </div>
+    </div>
+    <%- include("../partials/download-btn1.ejs") %>
+  </form>
+  <div class="d-none" id="loader"><%- include("../partials/loader.ejs") %></div>
+</main>
 <%- include("../partials/layout-bottom.ejs") %>
